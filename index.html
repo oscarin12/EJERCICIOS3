@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=ISO8859-1" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+ <div>
+  <table id="from-conter">
+    <tr>
+      <td colspan="5"><h1>FORMULARIOS</h1></td>
+    </tr>
+
+    <tr>
+      <td>Nombre</td>
+      <td>Apellidos</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" id="nombre" name="nombre" data-validacion="texto"  class="txt_obligatorio" />
+      </td>
+      <td>
+        <input type="text" id="apellidos" name="apellidos" data-validacion="texto"  class="txt_obligatorio" />
+      </td>
+    </tr>
+    <tr>
+      <td>Reginon</td>
+
+      <td>Comuna</td>
+    </tr>
+    <tr>
+      <td>
+        <div class="select-container">
+          <select name="reginon" id="regionSelect"  data-validacion="seleccion_obligatoria"  class="txt_obligatorio" >
+            <option value="">Seleccione</option>
+            <option value="1">Arica y. Parinacota.</option>
+            <option value="2">Los. Ríos.</option>
+            <option value="3">Los. Lagos.</option>
+          </select>
+        </div>
+      </td>
+      <td>
+        <div class="select-container" >
+          <select name="comuna" id="comuna"  data-validacion="seleccion_obligatoria"  class="txt_obligatorio" disabled>
+            <option value="">Seleccione</option>
+            <option value="1">Arica</option>
+            <option value="2">Camarones</option>
+            <option value="3">Putre</option>
+          </select>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1">Profesion</td>
+    </tr>
+    <tr>
+      <td colspan="1">
+        <div class="select-container">
+          <select name="profesion" id="profesion"  data-validacion="seleccion_obligatoria"  class="txt_obligatorio" >
+            <option value="">Seleccione</option>
+            <option value="1">Profesor</option>
+            <option value="2">Informatico</option>
+          </select>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Correo</td>
+    </tr>
+    <tr>
+      <td colspan="5">
+        <input type="email" id="email" name="email"  data-validacion="email"  class="txt_obligatorio"  />
+      </td>
+     
+    </tr>
+    <tr>
+      <td>Rut</td>
+      <td>Edad</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" id="rut" name="rut" data-validacion="rut" pattern="^[0-9]{7,8}-[0-9Kk]$" title="Formato esperado: 12345678-9"  class="txt_obligatorio" >
+      </td>
+      <td>
+        <input type="text" id="edad" name="edad" data-validacion="numero_entero"  class="txt_obligatorio"  />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5"><button class="buton" onclick="validarCampo()" >enviar</button></td>
+    </tr>
+  </table>
+ </div>
+ <script type="text/javascript" src="controlador.js"></script>
+<script type="text/javascript" src="util.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+/* Reset básico para quitar márgenes y paddings por defecto */
+body, html, h1, table, td, th, input, select, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el encabezado h1 */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  max-width: 250px; /* Ancho máximo para la tabla */
+  margin: 20px auto; /* Centrar la tabla en la página */
+  border-collapse: collapse; /* Colapsar bordes de la tabla */
+  background-color: #f0f0f0; /* Color de fondo */
+  border: 2px solid #ccc; /* Borde de la tabla */
+  padding: 5px;
+}
+
+/* Estilos para las celdas de encabezado */
+th {
+  background-color: #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Estilos para las celdas de datos */
+td {
+  padding: 5px;
+}
+
+/* Estilos para los inputs y selects */
+input[type="text"],
+select {
+  
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="email"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estilos para los botones */
+.buton {
+  background-color: #1ca03d;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+}
+
+/* Estilos para el contenedor de selects */
+.select-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Estilos para las opciones de los selects */
+select option {
+  padding: 8px;
+}
+
+
+  .select-container {
+    position: relative;
+    width: 200px; 
+    margin-bottom: 20px;
+  }
+  
+  .select-container select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .select-container::after {
+    content: '\25BC'; 
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; 
+  }
